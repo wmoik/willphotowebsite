@@ -4,7 +4,7 @@ html {
   overflow-y: scroll;
 }
 
-body { font-family: 'Cinzel', sans-serif; }
+.titlefont { font-family: 'Cinzel', sans-serif; }
 
 h1 {
   font-size: 50px;
@@ -14,12 +14,55 @@ h1 {
 }
 
 h2 {
-  font-family: 'Cinzel';
   font-weight: 100;
   font-size: 20px;
   text-align: center;
   margin-top: 0px;
 }
+
+nav {
+  text-align: center;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+a {
+
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover
+{
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+
+/*  SECTIONS FOR EGNINEERING  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
 
 /* ---- grid ---- */
 
@@ -131,4 +174,18 @@ h2 {
   .grid-sizer, .item {
     width: 49%;
   }
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+.span_1_of_3_small {width: 15%}
+.span_1_of_3_large {width: 40%}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }
